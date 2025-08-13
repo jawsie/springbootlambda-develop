@@ -1,0 +1,43 @@
+version: 0.2
+env:
+  variables:
+    SONARCLOUD_ORG: "heisentech-spring-boot"
+    PROJECT_KEY: "heisentech-spring-boot_springbootlambdasonarproject"
+    SONARCLOUD_TOKEN: "37c122aeb964170819e812d863fd768eefe0bfeb"
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+    commands:
+    #  - yum update -y
+    #  - yum install -y jq
+    #  - wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.3.0.1492-linux.zip
+    #  - unzip ./sonar-scanner-cli-3.3.0.1492-linux.zip
+    #  - export PATH=$PATH:./sonar-scanner-3.3.0.1492-linux/bin/
+
+  pre_build:
+    commands:
+    #  - aws --version
+    #  - echo $SONARCLOUD_ORG
+    #  - echo $PROJECT_KEY
+    #  - echo $SONARCLOUD_TOKEN
+    #  - echo $PATH
+      - mvn --version
+      - mvn clean install
+    #  - mvn sonar:sonar -Dsonar.token=$SONARCLOUD_TOKEN
+    #  - sleep 5
+    #  - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$PROJECTKEY > analysis.json
+    #  - cat analysis.json
+
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Java project...
+      - mvn package
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - target/*.jar
