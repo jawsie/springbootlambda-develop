@@ -15,7 +15,7 @@ public class ProfileController {
 
   @GetMapping(value = "users", produces = MediaType.APPLICATION_JSON_VALUE)
   public List<User> getUser() {
-    return List.of(new User("John1", "Doe1", "john.doe@gmail.com"),
+    return List.of(new User("jawahar", "antao", "jawahar.antao@gmail.com"),
         new User("Pradeep", "Kolapkar", "pradeepkolpkar@heisentech.com"));
   }
 
