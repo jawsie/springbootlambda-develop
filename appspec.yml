@@ -6,4 +6,4 @@ Resources:
         Name: "springboot-lambda"
         Alias: "springboot-lambda-alias"
         CurrentVersion: 1
-        TargetVersion: 1
+        TargetVersion: 2
