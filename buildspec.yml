@@ -25,5 +25,5 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - heisentechsolutions-0.0.1-SNAPSHOT.jar
+    - target/heisentechsolutions-0.0.1-SNAPSHOT.jar
     - appspec.yml
