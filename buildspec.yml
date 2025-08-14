@@ -21,6 +21,7 @@ phases:
     #  - zip -r heisentechsolutions-0.0.1-SNAPSHOT.zip heisentechsolutions-0.0.1-SNAPSHOT.jar
     #  - cd ../..
        - mv  target/heisentechsolutions-0.0.1-SNAPSHOT.jar .
+       - ls -la
 
   post_build:
     commands:
