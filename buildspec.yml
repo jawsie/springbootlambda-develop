@@ -20,17 +20,20 @@ phases:
     #  - cd target/lambda
     #  - zip -r heisentechsolutions-0.0.1-SNAPSHOT.zip heisentechsolutions-0.0.1-SNAPSHOT.jar
     #  - cd ../..
-       - cd target
+       - mkdir -p target/lambda
+       - cp target/heisentechsolutions-0.0.1-SNAPSHOT.jar target/lambda/
+       - cd target/lambda
        - pwd
        - ls -la
        - jar xvf heisentechsolutions-0.0.1-SNAPSHOT.jar
        - ls -la
        - rm -rf heisentechsolutions-0.0.1-SNAPSHOT.jar
        - ls -la
-       - zip -r heisentechsolutions-0.0.1-SNAPSHOT.zip *.*
+       - zip -R heisentechsolutions-0.0.1-SNAPSHOT.zip *
        - ls -la
-       - cd ..
-       - mv  target/heisentechsolutions-0.0.1-SNAPSHOT.zip .
+       - cd ../..
+       - pwd
+       - mv  target/lambda/heisentechsolutions-0.0.1-SNAPSHOT.zip .
        - ls -la
 
   post_build:
