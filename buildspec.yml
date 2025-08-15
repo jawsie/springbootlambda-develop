@@ -29,7 +29,7 @@ phases:
        - ls -la
        - rm -rf heisentechsolutions-0.0.1-SNAPSHOT.jar
        - ls -la
-       - zip -R heisentechsolutions-0.0.1-SNAPSHOT.zip *
+       - zip -r heisentechsolutions-0.0.1-SNAPSHOT.zip ./*
        - ls -la
        - cd ../..
        - pwd
